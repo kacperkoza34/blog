@@ -8,7 +8,6 @@
 
 
 const titleClickHandler = function(event){
-  const clickedElement = this;
   console.log('Link was clicked!');
 
 
@@ -21,7 +20,6 @@ for(let activeLink of activeLinks){
 }
 
   /* add class 'active' to the clicked link */
-  console.log('clickedElement:', clickedElement);
 
   /* remove class 'active' from all articles */
 
@@ -36,9 +34,10 @@ for(let activeArticle of activeArticles){
   /* find the correct article using the selector (value of 'href' attribute) */
 
   /* add class 'active' to the correct article */
+}
+
 const links = document.querySelectorAll('.titles a');
 
 for(let link of links){
   link.addEventListener('click', titleClickHandler);
-  }
 }
