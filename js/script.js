@@ -39,14 +39,14 @@ for(let activeArticle of activeArticles){
 
   /* find the correct article using the selector (value of 'href' attribute) */
 
-  let correctArticle = document.querySelector(elementAttribute);
+  let correctArticle = document.querySelector(elementAttribute);  // <----- nie rozumiem jak działa selektor
 
   /* add class 'active' to the correct article */
   correctArticle.classList.add('active')
+}
 
 const links = document.querySelectorAll('.titles a');
 
 for(let link of links){
   link.addEventListener('click', titleClickHandler);
-  }
 }
