@@ -1,4 +1,3 @@
-*.js text eol=lf;
 'use strict';
 const templates = {
   articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
@@ -20,8 +19,7 @@ const titleClickHandler = function(event){
   let elementAttribute = clickedElement.getAttribute('href');
   let correctArticle = document.querySelector(elementAttribute);
   correctArticle.classList.add('active');
-}
-
+};
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles',
@@ -49,6 +47,7 @@ function generateTitleLinks(customSelector = ''){
     link.addEventListener('click', titleClickHandler);
   }
 }
+
 generateTitleLinks();
 
 function calculateTagsParams(tags){
@@ -64,7 +63,6 @@ function calculateTagsParams(tags){
    }
   return params;
 }
-
 function generateTags(){
   let allTags = {};
   let allTagsHTML = '';
