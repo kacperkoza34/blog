@@ -118,3 +118,26 @@ body {
     margin: 0 10px 0 0;
   }
 }
+.tags li{
+  display: inline-flex;
+}
+.tag-size-1{
+  color: red;
+  font-size: 10px;
+}
+.tag-size-2{
+  color: grey;
+  font-size: 20px;
+}
+.tag-size-3{
+  color: pink;
+  font-size: 40px;
+}
+.tag-size-4{
+  color: black;
+  font-size: 44px;
+}
+.tag-size-5{
+  color: green;
+  font-size: 50px;
+}
