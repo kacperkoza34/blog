@@ -192,9 +192,19 @@
         <aside class="sidebar">
           <h2 class="section-title">Tags</h2>
           <ul class="list tags" id="list-tags">
+						<script id="template-tag-cloud-link" type="text/x-handlebars-template">
+						  {{#each tags}}
+						  <a href='#tag-{{tag}}'><li class='{{className}}'>{{ tag }}</li></a>
+						  {{/each}}
+						</script>
           </ul>
           <h2 class="section-title">Authors</h2>
           <ul class="list authors">
+						<script id="template-authors-names" type="text/x-handlebars-template">
+						  {{#each authors}}
+							<li><a href="#tag-{{tag}}"><span>{{ tag }}</span></a></li>
+						  {{/each}}
+						</script>
           </ul>
         </aside>
       </main>
@@ -202,12 +212,14 @@
   </div>
   <script id="template-article-link" type="text/x-handlebars-template">
   <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
-</script>
+	</script>
 
 	<script src="js/functions.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
 	<script src="js/script.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
