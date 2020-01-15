@@ -16,8 +16,8 @@ const titleClickHandler = function(event){
   for(let activeArticle of activeArticles){
     activeArticle.classList.remove('active');
   }
-  let elementAttribute = clickedElement.getAttribute('href');
-  let correctArticle = document.querySelector(elementAttribute);
+  const elementAttribute = clickedElement.getAttribute('href');
+  const correctArticle = document.querySelector(elementAttribute);
   correctArticle.classList.add('active');
 };
 const optArticleSelector = '.post',
@@ -68,19 +68,18 @@ function calculateTagsParams(tags){
 function calculateTagClass(count, params){
   const scope = params.max - params.min+1;
   const level = 1/optCloudClassCount;
-  let inScope = count/scope;
+  const inScope = count/scope;
   let final = 0;
   let i = 0;
   do{
       i++;
       final=i;
   }while(level*i<inScope);
-  console.log(scope +'    '+level + '     ' + inScope+'     '+final);
- return optCloudClassPrefix + final;
+  return optCloudClassPrefix + final;
 }
 
 function generateTags(){
-  let allTags = {};
+  const allTags = {};
   let allTagsHTML = '';
   const articles = document.querySelectorAll(optArticleSelector);
   for( let article of articles) {
@@ -156,7 +155,7 @@ function generateAuthors(){
 generateAuthors();
 
 function generateAuthorsList(){
-  let authorList = { };
+  const authorList = { };
   const authorsNames = document.querySelectorAll('article');
   let html = '';
   for(let author of authorsNames){
